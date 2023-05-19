@@ -24,21 +24,52 @@ const PartDiv = styled.div`
 const Button = styled.button`
     height: 44px;
     width: 420px;
-    background: transparent;
-    color: black;
-    margin-top: 38.84px;
+    background: #F6473A;
+    color: #FFFFFF;
+    margin-top: 67.84px;
+
     letter-spacing: 0.05em;
     text-align: center;
-    border: 1px solid #222222;
+    border: 1px solid #FFFFFF;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3), 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
     border-radius: 5px;
     font-family: 'SangSangShinb7', sans-serif;
+    font-size: 40px;
+
+
+
     &:hover {
-        background: #6CACFF;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.08)),
+linear-gradient(0deg, #F6473A, #F6473A);
+
+    }
+    &:focus {
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0.12)),
+linear-gradient(0deg, #F6473A, #F6473A);
+
+    }
+    &:active {
+        background: linear-gradient(0deg, rgba(46, 46, 46, 0.2), rgba(46, 46, 46, 0.2)),
+linear-gradient(0deg, #F6473A, #F6473A);
+
+    }
+
+    &:focus,&:active {
+        background: linear-gradient(0deg, rgba(67, 67, 67, 0.16), rgba(67, 67, 67, 0.16)),
+        linear-gradient(0deg, #F6473A, #F6473A);
+        
     }
 `;
 
 const Header = styled.div`
-    margin-bottom: 343px;
+    margin-top:187px;
+    margin-bottom: 68px;
+    font-size: 64px;
+    border:none;
+`;
+const StyleLink = styled(Link)`
+color : black;
+
 `;
 
 const Home = () => {
@@ -47,9 +78,9 @@ const Home = () => {
         <Div>
             <PartDiv>
                 <div className="uhbee-rami-font">
-                    <Link to={`/`}><Header>안녕하세요 저는 </Header></Link>
+                    <StyleLink to={`/`}style={{ textDecoration: "none" }}color="black"><Header>걱정 먹는 깜장이 </Header></StyleLink>
                     </div>
-                <img src={Black} alt="이미지" style={{ width: '282px', height: 'auto' }} />
+                <img src={Black} alt="이미지" style={{ width: '166px', height: 'auto' }} />
                         <Link to={`/Text`}><Button>깜장이에게 먹이주러 가기</Button></Link>
             </PartDiv>
         </Div>
