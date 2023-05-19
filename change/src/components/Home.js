@@ -3,6 +3,7 @@ import styled, { ThemeProvider } from 'styled-components';
 import { theme } from '../../src/styles/theme';
 import Black from '../../src/assets/img/main.png'
 import '../../src/App.css';
+import { useState } from "react";
 
 const Div = styled.div`
     margin: 0px auto;
@@ -90,16 +91,34 @@ font-weight: bold;
 `;
 
 const Intro = styled.div`
+  width: 100%;
+
 font-size:24px;
 display: flex;
 align-items: center;
 justify-content: flex-end;
-margin-right:220px;
-margin-top:52px;
+
+`;
+const ContentsBox = styled.div`
+  width: 200px;
+  height: 200px;
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
 `;
 
 
 const Home = () => {
+    const [showContentsBox, setShowContentsBox] = useState(false);
+
+    const handleClick = () => {
+      setShowContentsBox(true);
+    };
+  
     const copyToClipboard = () => {
         const currentURL = window.location.href;
         navigator.clipboard.writeText(currentURL)
@@ -115,7 +134,12 @@ const Home = () => {
 <ThemeProvider theme={theme}>
 <div className="sangsang-shinb7-font">
     <Intro>
-    깜장이 소개</Intro>
+    {showContentsBox ? (
+        <ContentsBox>Contents Box</ContentsBox>
+      ) : (
+       null
+      )}
+</Intro>
     </div>
         <Div>
             <PartDiv>
