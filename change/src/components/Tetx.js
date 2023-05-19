@@ -57,10 +57,8 @@ const Text = () => {
 
      width: 100%;
      height: 24px;
-  
-     
+    
      `
-
     const Circle1 = styled.div`
   
      width: 24px;

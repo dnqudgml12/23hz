@@ -7,6 +7,7 @@ import image2 from '../assets/img/image2.png';
 import image3 from '../assets/img/image3.png';
 import image4 from '../assets/img/image4.png';
 import line from '../assets/img/line.png';
+import process2 from '../assets/img/process2.png'
 
 // const Loading = styled.div`
 //   display: inline-block;
@@ -29,6 +30,11 @@ const Background = styled.img`
 position: absolute;
 width: 100%;
 z-index: -1;
+`;
+const Process2 = styled.img`
+  width : 177px;
+  height: 24px;
+  z-index: 1;
 `;
 const Image = styled.img`
   width: 155px;
@@ -63,8 +69,8 @@ const Eat = () => {
     }, 400); // 0.3초마다 이미지 변경
 
     const timer = setTimeout(() => {
-      navigate('/Cookie');
-    }, 40000);
+      navigate('/EatFinish');
+    }, 30000);
 
     return () => {
       clearTimeout(timer);
@@ -75,6 +81,7 @@ const Eat = () => {
   return (
     <ThemeProvider theme={theme}>
       <All>
+        <Process2></Process2>
         <Div>걱정 먹는 중...</Div>
         <Image src={images[currentImage]} alt={`Image ${currentImage}`} />
         <Background src={line}></Background>
