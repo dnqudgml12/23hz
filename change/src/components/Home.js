@@ -1,17 +1,19 @@
-import React from "react";
-import styled from 'styled-components';
+// import React from "react";
+// import styled from 'styled-components';
 import { Link } from "react-router-dom";
+import styled, { ThemeProvider } from 'styled-components';
+import { theme } from '../../src/styles/theme';
 
 const Div = styled.div`
-margin: 0px auto;
-justify-content: center;
-align-item: center;
-display: flex;
+    margin: 0px auto;
+    justify-content: center;
+    align-item: center;
+    display: flex;
 `;
 
 const PartDiv = styled.div`
-display: flex;
-   flex-direction: column;
+    display: flex;
+    flex-direction: column;
     height: 750px;
     align-items: center;
     margin: 0px auto;
@@ -19,27 +21,41 @@ display: flex;
 `;
 
 const Button = styled.button`
-  height: 50px;
-  weight: 50px;
-  background: transparent;
-  color: black;
-  margin-top: 25px;
-  margin-bottom: 24px;
-  letter-spacing: 0.05em;
-  &:hover {
-    background: #6CACFF;
-  }
+    height: 50px;
+    weight: 50px;
+    background: transparent;
+    color: black;
+    margin-top: 25px;
+    margin-bottom: 24px;
+    letter-spacing: 0.05em;
+    font-size: ${props => props.theme.Web_fontSizes.subtitle1};
+    font-weight: ${props => props.theme.fontWeights.subtitle1};
+    font-family: 'NanumSquare Neo';
+    text-align: center;
+    &:hover {
+        background: #6CACFF;
+    }
+`;
+
+const Header = styled.div`
+    font-size: ${props => props.theme.Web_fontSizes.subtitle1};
+    font-weight: ${props => props.theme.fontWeights.subtitle1};
+    font-family: 'NanumSquare Neo';
 `;
 
 
-const Home=()=>{
-    return(
+const Home = () => {
+    return (
+
         <Div>
             <PartDiv>
-            <Link to={`/`}>Home</Link>
-        <Link to={`/Text`}><Button>깜장이에게 먹이주러 가기</Button></Link>
-        </PartDiv>
+                <ThemeProvider theme={theme}>
+                    <Link to={`/`}><Header>Home</Header></Link>
+                    <Link to={`/Text`}><Button>깜장이에게 먹이주러 가기</Button></Link>
+                </ThemeProvider>
+            </PartDiv>
         </Div>
+
     )
 }
 
