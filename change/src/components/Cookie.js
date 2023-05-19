@@ -39,7 +39,7 @@ const Text = styled.div`
 `;
 const Button = styled.button`
     height: 32px;
-    width: 167px;
+    width: 253px;
     background: #F6473A;
     color: #FFFFFF;
     margin-top: 20.84px;
@@ -70,7 +70,7 @@ linear-gradient(0deg, #F6473A, #F6473A);
 `;
 const Button2 = styled.button`
     height: 32px;
-    width: 167px;
+    width: 253px;
     background: #646464;
     color: #FFFFFF;
     margin-top: 20.84px;

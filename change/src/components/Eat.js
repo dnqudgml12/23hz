@@ -80,7 +80,7 @@ const Eat = () => {
 
     const timer = setTimeout(() => {
       navigate('/EatFinish');
-    }, 3000);
+    }, 4000);
 
     return () => {
       clearTimeout(timer);

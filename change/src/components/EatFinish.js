@@ -30,7 +30,7 @@ const Process3 = styled.img`
 
 const Button = styled.button`
     height: 32px;
-    width: 157px;
+    width: 253px;
     background: #F6473A;
     color: #FFFFFF;
     margin-top: 67.84px;
@@ -40,7 +40,7 @@ const Button = styled.button`
     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3), 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
     border-radius: 5px;
     font-family: 'SangSangShinb7', sans-serif;
-    font-size: 26px;
+    font-size: 28px;
     &:hover {
         background: linear-gradient(0deg, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.08)),
 linear-gradient(0deg, #F6473A, #F6473A);
