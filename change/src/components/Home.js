@@ -14,16 +14,10 @@ const Div = styled.div`
 const PartDiv = styled.div`
     display: flex;
     flex-direction: column;
-    height: 1024px;
+    height: 800px;
     align-items: center;
     margin: 0px auto;
     width: 1440px;
-`;
-
-const HomeLink = styled.div`
-    font-size: 22.55px;
-    margin-top : 52px;
-    margin-left:200px;
 `;
 
 const Button = styled.button`
@@ -31,7 +25,7 @@ const Button = styled.button`
     width: 420px;
     background: #F6473A;
     color: #FFFFFF;
-    margin-top: 67.84px;
+    margin-top: 5px;
     letter-spacing: 0.05em;
     text-align: center;
     border: 1px solid #FFFFFF;
@@ -66,6 +60,16 @@ linear-gradient(0deg, #F6473A, #F6473A);
     }
 `;
 
+const URL = styled.div`
+margin-top: 30px;
+font-family: 'SangSangShinb7', sans-serif;
+font-size: 24px;
+
+&:hover {
+    cursor: pointer;
+}
+`;
+
 const Header = styled.div`
     margin-top:187px;
     margin-bottom: 68px;
@@ -78,23 +82,40 @@ const StyleLink = styled(Link)`
 color : black;
 `;
 
+const Eating = styled.div`
+margin-top: 13.84px;
+font-size: 24.58px;
+text-align: center;
+font-weight: bold;
+`;
+
+
 const Home = () => {
+    const copyToClipboard = () => {
+        const currentURL = window.location.href;
+        navigator.clipboard.writeText(currentURL)
+          .then(() => {
+            console.log('URL copied to clipboard!');
+          })
+          .catch((error) => {
+            console.error('Failed to copy URL to clipboard:', error);
+          });
+      };
     return (
 <ThemeProvider theme={theme}>
-
-
-<div className="uhbee-rami-font">
-<StyleLink to={`/`}style={{ textDecoration: "none" }}><HomeLink>걱정 먹는 깜장이</HomeLink></StyleLink>    
-    </div>
-    {/* 1. StyleLink div 가져오기 , 2. HomeLink div 가져오기 */}
-    
         <Div>
             <PartDiv>
                 <div className="uhbee-rami-font">
                     <StyleLink to={`/`}style={{ textDecoration: "none" }}><Header>걱정 먹는 깜장이 </Header></StyleLink>
                     </div>
                 <img src={Black} alt="이미지" style={{ width: '166px', height: 'auto' }} />
+                <div className="uhbee-rami-font">
+                <Eating>너의 걱정을 먹어줄게!</Eating>
+                </div>
+                <URL><p><span onClick={copyToClipboard} style={{ color: 'red', fontWeight: 'bold' }}>URL 복사하기</span></p></URL>
+
                         <Link to={`/Text`}><Button>깜장이에게 먹이주러 가기</Button></Link>
+                        
             </PartDiv>
         </Div>
         </ThemeProvider>
