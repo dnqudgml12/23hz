@@ -32,9 +32,13 @@ const Dropdown = styled.div`
 display: inline-block;
 align-items: center;
 text-align: center;
+line-height: 35px; 
+
+
 font-family: 'Pretendard-Regular', sans-serif;
 color: white;
   position: relative;
+
 
   width: 151px;
   height:32px;
@@ -49,6 +53,7 @@ const ArrowContainer = styled.div`
 
   &::after {
     position: absolute;
+     bottom:-4px;
 
     right: 10px;
     content: "▼";
@@ -64,9 +69,11 @@ const DropdownContent = styled.div`
   overflow: auto;
   border-radius: 8px;
   z-index: 1;
+  
 `;
 
 const DropdownOption = styled.div`
+
 font-family: 'Pretendard-Regular', sans-serif;
   color: white;
   padding: 12px 16px;
