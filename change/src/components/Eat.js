@@ -1,5 +1,7 @@
-import React from "react";
+import React, {useEffect} from "react";
 import styled from "styled-components";
+import {useNavigate} from "react-router-dom";
+
 
 const Loading = styled.div`
   display: inline-block;
@@ -20,6 +22,17 @@ const Loading = styled.div`
 `; 
 
 const Eat=()=>{
+    const navigate = useNavigate();
+
+    useEffect(() => {
+      const timer = setTimeout(() => {
+        navigate('/Text');
+      }, 5000);
+  
+      return () => {
+        clearTimeout(timer);
+      };
+    }, []);
 
     return(
         <div>
