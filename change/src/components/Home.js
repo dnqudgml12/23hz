@@ -27,7 +27,6 @@ const Button = styled.button`
     background: #F6473A;
     color: #FFFFFF;
     margin-top: 67.84px;
-
     letter-spacing: 0.05em;
     text-align: center;
     border: 1px solid #FFFFFF;
@@ -35,6 +34,7 @@ const Button = styled.button`
     border-radius: 5px;
     font-family: 'SangSangShinb7', sans-serif;
     font-size: 40px;
+    padding-top:0.001px;
 
 
 
