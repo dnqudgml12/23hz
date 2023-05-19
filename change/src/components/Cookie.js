@@ -9,6 +9,18 @@ import image3 from '../assets/img/image3.png';
 const Image = styled.img`
   width: 300px;
 `;
+const Div = styled.div`
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center ;
+
+`;
+
+const Text = styled.div`
+    font-family: 'SangSangShinb7', sans-serif;
+`;
 
 const Cookie = () => {
   const [todayEmoticon, setTodayEmoticon] = useState(null);
@@ -39,10 +51,10 @@ const Cookie = () => {
   
   return (
     <ThemeProvider theme={theme}>
-      <div>
+      <Div>
         <Image src={todayEmoticon} alt="Today's Emoticon" />
-        <div>{todayLuck}</div>
-      </div>
+        <Text>{todayLuck}</Text>
+      </Div>
     </ThemeProvider>
   );
 };
