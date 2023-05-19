@@ -95,12 +95,13 @@ const Home = () => {
         const currentURL = window.location.href;
         navigator.clipboard.writeText(currentURL)
           .then(() => {
-            console.log('URL copied to clipboard!');
+            window.alert('URL이 복사되었습니다!');
           })
           .catch((error) => {
             console.error('Failed to copy URL to clipboard:', error);
           });
       };
+      
     return (
 <ThemeProvider theme={theme}>
         <Div>
