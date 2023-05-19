@@ -4,6 +4,7 @@ import Text from './components/Tetx';
 import Eat from './components/Eat';
 import Cookie from './components/Cookie';
 import './App.css';
+import EatFinish from './components/EatFinish';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
     <Route path='/' element={<Home/>}></Route>
     <Route path='/Text' element={<Text/>}></Route>
     <Route path='/Eat' element={<Eat/>}></Route>
+    <Route path='/EatFinish' element={<EatFinish/>}></Route>
     <Route path='/Cookie' element={<Cookie/>}></Route>
     </Routes>
    </Router> 
