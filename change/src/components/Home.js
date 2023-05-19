@@ -3,6 +3,7 @@
 import { Link } from "react-router-dom";
 import styled, { ThemeProvider } from 'styled-components';
 import { theme } from '../../src/styles/theme';
+import Black from '../../src/assets/img/default.jpg'
 
 const Div = styled.div`
     margin: 0px auto;
@@ -19,6 +20,7 @@ const PartDiv = styled.div`
     margin: 0px auto;
     width: 1330px;
 `;
+
 
 const Button = styled.button`
     height: 50px;
@@ -51,6 +53,7 @@ const Home = () => {
             <PartDiv>
                 <ThemeProvider theme={theme}>
                     <Link to={`/`}><Header>Home</Header></Link>
+                    <img src={Black} alt="이미지" style={{ width: '200px', height: 'auto' }} />
                     <Link to={`/Text`}><Button>깜장이에게 먹이주러 가기</Button></Link>
                 </ThemeProvider>
             </PartDiv>

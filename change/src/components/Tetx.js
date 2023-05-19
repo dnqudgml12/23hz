@@ -48,7 +48,7 @@ const Text = () => {
             {come === true ? 
                 <form  onSubmit={(e)=>{
                     e.preventDefault();
-                   navigate('/');
+                   navigate('/Eat');
                     
                 }}>
                     <textarea placeholder='당신의 걱정을 입력하세요'></textarea>
