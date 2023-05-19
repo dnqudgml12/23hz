@@ -25,7 +25,7 @@ const Text = () => {
         
     }
 
-    const Form= styled.form`
+    const Form= styled.div`
     
     margin-left: 800px;
     margin-top: 50px;
