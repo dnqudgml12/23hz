@@ -49,7 +49,7 @@ const Eat = () => {
 
     const timer = setTimeout(() => {
       navigate('/Cookie');
-    }, 5000);
+    }, 4000);
 
     return () => {
       clearTimeout(timer);

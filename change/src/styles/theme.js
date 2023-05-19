@@ -61,7 +61,7 @@ export const GlobalStyle = createGlobalStyle`
 
   body{
       font-family: "NanumSquare Neo";
-      background-color: #1A1A1A;
+      background-color: #E7E1C7;
    }
 
 `;
