@@ -32,7 +32,7 @@ const Dropdown = styled.div`
 display: inline-block;
 align-items: center;
 text-align: center;
-font-family: 'Pretendard';
+font-family: 'Pretendard-Regular', sans-serif;
 color: white;
   position: relative;
 
@@ -56,6 +56,7 @@ const ArrowContainer = styled.div`
   }
 `;
 const DropdownContent = styled.div`
+
   display: ${(props) => (props.show ? "block" : "none")};
   position: absolute;
   background-color: #222222;
@@ -66,6 +67,7 @@ const DropdownContent = styled.div`
 `;
 
 const DropdownOption = styled.div`
+font-family: 'Pretendard-Regular', sans-serif;
   color: white;
   padding: 12px 16px;
   text-decoration: none;
@@ -76,6 +78,7 @@ const DropdownOption = styled.div`
 `;
 
 const TEXT= styled.textarea`
+font-family: 'Pretendard-Regular', sans-serif;
 margin-top: 34px;
 box-sizing: border-box;
 width: 151px;
@@ -88,7 +91,7 @@ border-radius: 8px;
 `
 
 const Button= styled(Link)`
-font-family: 'Pretendard';
+  font-family: 'Pretendard-Regular', sans-serif;
 font-style: normal;
 font-weight: 600;
 font-size: 14px;
@@ -124,6 +127,7 @@ const MiddleContent = styled.div`
   flex-direction: column;
 `;
 const Processbar= styled.div`
+
  display: flex;
     align-items: center;
 margin-top: 50px;
@@ -254,11 +258,11 @@ color : black;
         <StyleLink to={`/`}style={{ textDecoration: "none" }}><HomeLink>걱정 먹는 깜장이</HomeLink></StyleLink> 
  <MiddleContent>
          <Processbar>
-                <Circle1>1</Circle1>
+                <Circle1><div className="pretendard-font">1</div></Circle1>
             <Line1/>
-            <Circle2>2</Circle2>
+            <Circle2><div className="pretendard-font">2</div></Circle2>
             <Line2/>
-            <Circle3>3</Circle3>
+            <Circle3><div className="pretendard-font">3</div></Circle3>
             
                  </Processbar>
                  
