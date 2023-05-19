@@ -35,7 +35,8 @@ text-align: center;
 line-height: 35px; 
 
 
-font-family: 'Pretendard-Regular', sans-serif;
+font-family: 'SangSangShinb7';
+font-size: 30px;
 color: white;
   position: relative;
 
@@ -74,7 +75,8 @@ const DropdownContent = styled.div`
 
 const DropdownOption = styled.div`
 
-font-family: 'Pretendard-Regular', sans-serif;
+font-family: 'SangSangShinb7';
+font-size: 30px;
   color: white;
   padding: 12px 16px;
   text-decoration: none;
@@ -85,7 +87,8 @@ font-family: 'Pretendard-Regular', sans-serif;
 `;
 
 const TEXT= styled.textarea`
-font-family: 'Pretendard-Regular', sans-serif;
+font-family: 'SangSangShinb7';
+font-size: 30px;
 margin-top: 34px;
 box-sizing: border-box;
 width: 151px;
@@ -98,10 +101,10 @@ border-radius: 8px;
 `
 
 const Button= styled(Link)`
-  font-family: 'Pretendard-Regular', sans-serif;
+font-family: 'SangSangShinb7';
 font-style: normal;
 font-weight: 600;
-font-size: 14px;
+font-size: 30px;
 line-height: 30px;
 width: 253px;
 height: 32px;
