@@ -1,9 +1,10 @@
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 import styled, { ThemeProvider } from 'styled-components';
 import { theme } from '../../src/styles/theme';
 import Black from '../../src/assets/img/main.png'
 import '../../src/App.css';
 import { useState } from "react";
+
 
 const Div = styled.div`
     margin: 0px auto;
@@ -95,26 +96,51 @@ const Intro = styled.div`
 
 font-size:24px;
 display: flex;
-align-items: center;
-justify-content: flex-end;
+
+margin-top: 22px;
+margin-left: 90%;
 
 `;
 const ContentsBox = styled.div`
-  width: 200px;
-  height: 200px;
- 
+  border-radius: 30px;
+  width: 276px;
+  height: 414px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  font-size: 24px;
-  color: white;
-  cursor: pointer;
+  padding: 20px 30px;
+  margin-bottom: 50px;
+
+  /* Center the element */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  /* Appear over existing content */
+  z-index: 9999;
+  
+  /* Optional: Add a background color */
+  background: white;
 `;
 
+const ArrowContainer = styled.div`
+ 
+ cursor: pointer;
+
+ &::after {
+   position: absolute;
+  
+
+   right: 10px;
+   content: "✖";
+   color: black;
+ }
+`;
 
 const Home = () => {
     const [showContentsBox, setShowContentsBox] = useState(false);
-
+    const navigate=useNavigate();
     const handleClick = () => {
       setShowContentsBox(true);
     };
@@ -133,16 +159,22 @@ const Home = () => {
     return (
 <ThemeProvider theme={theme}>
 <div className="sangsang-shinb7-font">
-    <Intro>
+
+
+<Intro>
     {showContentsBox ? (
-        <ContentsBox>Contents Box</ContentsBox>
+        <ContentsBox>Contents Box 
+<ArrowContainer onClick={() =>  setShowContentsBox(false)} />
+
+        </ContentsBox>
       ) : (
-       null
+        <div onClick={handleClick}>깜냥이 소개</div>
       )}
 </Intro>
-    </div>
+</div>
         <Div>
             <PartDiv>
+
                 <div className="uhbee-rami-font">
                     <StyleLink to={`/`}style={{ textDecoration: "none" }}><Header>걱정 먹는 깜장이 </Header></StyleLink>
                     </div>
