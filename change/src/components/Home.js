@@ -71,7 +71,7 @@ font-size: 24px;
 `;
 
 const Header = styled.div`
-    margin-top:187px;
+    margin-top:97px;
     margin-bottom: 68px;
     font-size: 64px;
     border:none;
@@ -89,6 +89,15 @@ text-align: center;
 font-weight: bold;
 `;
 
+const Intro = styled.div`
+font-size:24px;
+display: flex;
+align-items: center;
+justify-content: flex-end;
+margin-right:220px;
+margin-top:52px;
+`;
+
 
 const Home = () => {
     const copyToClipboard = () => {
@@ -104,6 +113,10 @@ const Home = () => {
       
     return (
 <ThemeProvider theme={theme}>
+<div className="sangsang-shinb7-font">
+    <Intro>
+    깜장이 소개</Intro>
+    </div>
         <Div>
             <PartDiv>
                 <div className="uhbee-rami-font">
