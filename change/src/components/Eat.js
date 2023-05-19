@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styled, { ThemeProvider } from 'styled-components';
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { theme } from '../styles/theme';
 import image1 from '../assets/img/image1.png';
 import image2 from '../assets/img/image2.png';
@@ -34,7 +34,7 @@ z-index: -1;
 const Process2 = styled.img`
   width : 177px;
   height: 24px;
-  z-index: 1;
+  margin-bottom: 52px;
 `;
 const Image = styled.img`
   width: 155px;
@@ -42,7 +42,7 @@ const Image = styled.img`
   margin-top: 40px;
 `;
 const All = styled.div`
-height: 700px;
+height: 500px;
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -55,6 +55,16 @@ const Div = styled.div`
   font-weight: ${props => props.theme.fontWeights.Header2};
   color: #000000;
   font-family: 'SangSangShinb7', sans-serif;
+`;
+const HomeLink = styled.div`
+    font-size: 22.55px;
+    margin-top : 52px;
+    margin-left:200px;
+    font-family: 'SangSangShinb7', sans-serif;
+    font-size: 30px;
+`;
+const StyleLink = styled(Link)`
+color : black;
 `;
 
 const Eat = () => {
@@ -70,7 +80,7 @@ const Eat = () => {
 
     const timer = setTimeout(() => {
       navigate('/EatFinish');
-    }, 30000);
+    }, 3000);
 
     return () => {
       clearTimeout(timer);
@@ -80,8 +90,9 @@ const Eat = () => {
 
   return (
     <ThemeProvider theme={theme}>
+      <StyleLink to={`/`}style={{ textDecoration: "none" }}><HomeLink>걱정 먹는 깜장이</HomeLink></StyleLink>   
       <All>
-        <Process2></Process2>
+        <Process2 src={process2}></Process2>
         <Div>걱정 먹는 중...</Div>
         <Image src={images[currentImage]} alt={`Image ${currentImage}`} />
         <Background src={line}></Background>
