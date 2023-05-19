@@ -5,7 +5,6 @@ import Black from '../../src/assets/img/main.png'
 import '../../src/App.css';
 
 const Div = styled.div`
-background: #E7E1C7;
     margin: 0px auto;
     justify-content: center;
     align-items: center;
@@ -13,7 +12,6 @@ background: #E7E1C7;
 `;
 
 const PartDiv = styled.div`
-
     display: flex;
     flex-direction: column;
     height: 1024px;
@@ -33,6 +31,7 @@ const Button = styled.button`
     text-align: center;
     border: 1px solid #222222;
     border-radius: 5px;
+    font-family: 'SangSangShinb7', sans-serif;
     &:hover {
         background: #6CACFF;
     }
@@ -42,13 +41,14 @@ const Header = styled.div`
     margin-bottom: 343px;
 `;
 
-
 const Home = () => {
     return (
 <ThemeProvider theme={theme}>
         <Div>
             <PartDiv>
-                    <Link to={`/`}><Header>Home</Header></Link>
+                <div className="uhbee-rami-font">
+                    <Link to={`/`}><Header>안녕하세요 저는 </Header></Link>
+                    </div>
                 <img src={Black} alt="이미지" style={{ width: '282px', height: 'auto' }} />
                         <Link to={`/Text`}><Button>깜장이에게 먹이주러 가기</Button></Link>
             </PartDiv>
