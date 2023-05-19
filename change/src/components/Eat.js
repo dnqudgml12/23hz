@@ -25,11 +25,11 @@ const Loading = styled.div`
 `;
 
 const Image = styled.img`
-width: 100px;
-height: 100px;
+  width: 100px;
+  height: 100px;
 `;
 
-const Div = styled.div `
+const Div = styled.div`
   font-size: ${props => props.theme.Web_fontSizes.Header2};
   font-weight: ${props => props.theme.fontWeights.Header2};
   color: #000000;
@@ -43,28 +43,26 @@ const Eat = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-
     const interval = setInterval(() => {
       setCurrentImage((prevImage) => (prevImage + 1) % images.length);
     }, 300); // 0.3초마다 이미지 변경
+
     const timer = setTimeout(() => {
-        navigate('/Cookie');
-      }, 1000);
-
-
+      navigate('/Cookie');
+    }, 5000);
 
     return () => {
-        clearTimeout(timer);
+      clearTimeout(timer);
       clearInterval(interval); // 컴포넌트가 언마운트될 때 인터벌 클리어
     };
-  }, [images, navigate]);
+  }, []);
 
   return (
     <ThemeProvider theme={theme}>
       <div>
         <Div>Eat</Div>
         <Image src={images[currentImage]} alt={`Image ${currentImage}`} />
-        <Loading/>
+        <Loading />
       </div>
     </ThemeProvider>
   );
