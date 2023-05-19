@@ -1,7 +1,7 @@
 import React, {useEffect} from "react";
-import styled from "styled-components";
+import styled, { ThemeProvider } from 'styled-components';
 import {useNavigate} from "react-router-dom";
-
+import { theme } from '../styles/theme';
 
 const Loading = styled.div`
   display: inline-block;
@@ -20,13 +20,19 @@ const Loading = styled.div`
   to { -webkit-transform: rotate(360deg); }
 }
 `; 
+const Div = styled.div `
+  font-size: ${props => props.theme.Web_fontSizes.Header2};
+  font-weight: ${props => props.theme.fontWeights.Header2};
+  color: #000000;
+  font-family: 'NanumSquare Neo';
+`;
 
 const Eat=()=>{
     const navigate = useNavigate();
 
     useEffect(() => {
       const timer = setTimeout(() => {
-        navigate('/Text');
+        navigate('/Cookie');
       }, 5000);
   
       return () => {
@@ -35,10 +41,13 @@ const Eat=()=>{
     }, []);
 
     return(
+        <ThemeProvider theme={theme}>
         <div>
-        <div>Eat</div>
+        <Div>Eat</Div>
         <Loading/>
         </div>
+        </ThemeProvider>
+        
     )
 }
 
