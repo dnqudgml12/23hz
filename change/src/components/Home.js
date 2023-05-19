@@ -119,8 +119,8 @@ const ContentsBox = styled.img`
 const ArrowContainer = styled.div`
     cursor: pointer;
     position: fixed;
-    top: 25%;
-    left: 57.8%;
+    top: 17%;
+    left: 60%;
     &::after {
         position: absolute;
         right: 10px;
