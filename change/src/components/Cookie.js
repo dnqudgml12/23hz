@@ -16,7 +16,8 @@ import url from '../assets/img/url.png';
 
 
 const Image = styled.img`
-  width: 300px;
+  width: 500px;
+  height: 300px;
 `;
 const Url = styled.img`
     width : 134px;
