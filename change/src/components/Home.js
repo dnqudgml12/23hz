@@ -97,8 +97,8 @@ const Intro = styled.div`
 
 const ContentsBox = styled.img`
     border-radius: 30px;
-    width: 276px;
-    height: 414px;
+    width: 400px;
+    height: 600px;
     display: flex;
     flex-direction: column;
     align-items: center;
