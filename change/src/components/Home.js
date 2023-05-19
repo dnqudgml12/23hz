@@ -20,6 +20,11 @@ const PartDiv = styled.div`
     width: 1440px;
 `;
 
+const HomeLink = styled.div`
+    font-size: 22.55px;
+    margin-top : 52px;
+    margin-left:200px;
+`;
 
 const Button = styled.button`
     height: 44px;
@@ -67,18 +72,26 @@ const Header = styled.div`
     font-size: 64px;
     border:none;
 `;
+
+
 const StyleLink = styled(Link)`
 color : black;
-
 `;
 
 const Home = () => {
     return (
 <ThemeProvider theme={theme}>
+
+
+<div className="uhbee-rami-font">
+<StyleLink to={`/`}style={{ textDecoration: "none" }}><HomeLink>걱정 먹는 깜장이</HomeLink></StyleLink>    
+    </div>
+    {/* 1. StyleLink div 가져오기 , 2. HomeLink div 가져오기 */}
+    
         <Div>
             <PartDiv>
                 <div className="uhbee-rami-font">
-                    <StyleLink to={`/`}style={{ textDecoration: "none" }}color="black"><Header>걱정 먹는 깜장이 </Header></StyleLink>
+                    <StyleLink to={`/`}style={{ textDecoration: "none" }}><Header>걱정 먹는 깜장이 </Header></StyleLink>
                     </div>
                 <img src={Black} alt="이미지" style={{ width: '166px', height: 'auto' }} />
                         <Link to={`/Text`}><Button>깜장이에게 먹이주러 가기</Button></Link>
