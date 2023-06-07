@@ -7,14 +7,17 @@ import line from '../assets/img/KakaoTalk_20230520_053822538.png';
 
 
 const Div = styled.div`
-    justify-content: center;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+
 
 `;
 
-const PartDiv = styled.div`
-    width: 1080px;  // Assuming the maximum width you want is 1440px
-`;
+
 
 
 
@@ -22,34 +25,29 @@ const Form = styled.div`
   align-items: center;
   display: flex;
   flex-direction: column;
-  margin-top: 300px; 
-  margin-left: 894px;
+
+
 
 
 `;
 
 const Dropdown = styled.div`
-display: inline-block;
-align-items: center;
-text-align: center;
-line-height: 35px; 
-
-
-font-family: 'SangSangShinb7';
-font-size: 30px;
-color: white;
-  position: relative;
-
+  display: inline-block;
+  align-items: center;
+  text-align: center;
+  line-height: 35px;
+  font-family: 'SangSangShinb7';
+  font-size: 30px;
+  color: white;
 
   width: 151px;
-  height:32px;
+  height: 32px;
   background-color: #222222; 
   border-radius: 8px;
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3), 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-  
 `;
 const ArrowContainer = styled.div`
- 
+   position: relative;
   cursor: pointer;
 
   &::after {
@@ -59,6 +57,7 @@ const ArrowContainer = styled.div`
     right: 10px;
     content: "▼";
     color: white;
+    font-size: 16px;
   }
 `;
 const DropdownContent = styled.div`
@@ -106,30 +105,26 @@ font-style: normal;
 font-weight: 600;
 font-size: 30px;
 line-height: 30px;
-width: 253px;
+width: 120px;
 height: 32px;
 background: #979797;
 border: 1px solid #FFFFFF;
 /* M3/Elevation Light/1 */
 margin-top: 50px;
-margin-left: 60px;
+margin-left: 10px;
 border: none;
-text-decoration: none;
+text-decoration: none; // Link to 시에 밑줄 없앤다.
 color: white;
 box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3), 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
 border-radius: 8px;
-color: white;
 text-align: center;
 
+
 `
 
 
 
-const Stdiv= styled(Link)`
 
-width: 155px;
-height: 40px;
-`
 const MiddleContent = styled.div`
   display: flex;
   justify-content: center;
@@ -235,15 +230,17 @@ const Text = () => {
   };
   const Background = styled.img`
   position: absolute;
- left:50%;
- transform: translateX(-50%);
+ left: 50%;
   width:100%;
+
+ transform: translateX(-50%);
+
   
   z-index: -1;
 `;
 const Bacckground = styled.img`
-position: absolute;
-left:900px;
+
+
 margin-top: 100px;
 
 
@@ -261,11 +258,16 @@ const HomeLink = styled.div`
 `;
 const StyleLink = styled(Link)`
 color : black;
+width: 600px;
+margin-right: 70%;
 `;
+
+
   return (
     <Div>
-        <PartDiv>
-        <StyleLink to={`/`}style={{ textDecoration: "none" }}><HomeLink>걱정 먹는 깜장이</HomeLink></StyleLink> 
+
+
+          <StyleLink to={`/`}style={{ textDecoration: "none" }}><HomeLink>걱정 먹는 깜장이</HomeLink></StyleLink> 
  <MiddleContent>
          <Processbar>
                 <Circle1><div className="pretendard-font">1</div></Circle1>
@@ -275,14 +277,15 @@ color : black;
             <Circle3><div className="pretendard-font">3</div></Circle3>
             
                  </Processbar>
-                 
-                 </MiddleContent>
                  <Bacckground src={Black}></Bacckground> 
-                     
+                  
+                 </MiddleContent>
+                 
+                 
       <Form>
       
     
-      <Background src={line}></Background>
+      <Background src={line}></Background> 
       
         <Dropdown>
         
@@ -294,9 +297,10 @@ color : black;
                 {cate}
               </DropdownOption>
             ))}
+ 
           </DropdownContent>
+         
         </Dropdown>
-      
       
         {ccome &&
           <form onSubmit={(e) => {
@@ -311,14 +315,15 @@ color : black;
             
           </form>
         }
+
         <Button to='/Eat' > 걱정먹이기!</Button>
           
          
        
       </Form>
 
-      </PartDiv>
-
+ 
+  
     </Div>
   );
 };
