@@ -8,20 +8,14 @@ import kg from '../assets/img/깜장이.png';
 
 
 const Div = styled.div`
-    margin: 0px auto;
-    justify-content: center;
-    align-items: center;
-    display: flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
 `;
 
-const PartDiv = styled.div`
-    display: flex;
-    flex-direction: column;
-    height: 800px;
-    align-items: center;
-    margin: 0px auto;
-    width: 1440px;
-`;
 
 const Button = styled.button`
     height: 44px;
@@ -88,7 +82,7 @@ const Eating = styled.div`
 `;
 
 const Intro = styled.div`
-    width: 100%;
+ 
     font-size: 24px;
     display: flex;
     margin-top: 22px;
@@ -119,11 +113,12 @@ const ContentsBox = styled.img`
 const ArrowContainer = styled.div`
     cursor: pointer;
     position: fixed;
-    top: 17%;
-    left: 60%;
+    top: 20%;
+    left: 58%;
+    min-width: 90px;
     &::after {
-        position: absolute;
-        right: 10px;
+      
+       
         content: "✖";
         color: black;
     }
@@ -156,6 +151,7 @@ const Home = () => {
                         <div>
                         <ContentsBox src={kg}/>
                         <ArrowContainer onClick={() => setShowContentsBox(false)} />
+                    
                         </div>
                     ) : (
                         <div onClick={handleClick}>깜장이 소개</div>
@@ -163,7 +159,7 @@ const Home = () => {
                 </Intro>
             </div>
             <Div>
-                <PartDiv>
+             
                     <div className="uhbee-rami-font">
                         <StyleLink to={`/`} style={{ textDecoration: "none" }}>
                             <Header>걱정 먹는 깜장이</Header>
@@ -183,8 +179,7 @@ const Home = () => {
                     <Link to={`/Text`}>
                         <Button>깜장이에게 먹이주러 가기</Button>
                     </Link>
-                </PartDiv>
-            </Div>
+          </Div>
         </ThemeProvider>
     );
 };
